@@ -120,49 +120,49 @@ class Mac extends Computer
 
 $ShipperInst = Shipper::getInstance();
 
-echo 'Testing PC Factory' . "\n";
+echo 'Testing PC Factory' . "<br>";
 $ComputerFactory = new PCFactory;
 tester($ComputerFactory, $ShipperInst);
-echo "\n\n";
+echo "<br><br>";
 
-//echo 'Get another PC' . "\n";
+//echo 'Get another PC' . "<br>";
 //$ComputerFactory
 
-echo 'Testing Mac Factory' . "\n";
+echo 'Testing Mac Factory' . "<br>";
 $ComputerFactory = new MacFactory;
 tester($ComputerFactory, $ShipperInst);
-echo "\n\n";
+echo "<br><br>";
 
-//echo 'Get another Mac' . "\n";
+//echo 'Get another Mac' . "<br>";
 
 
 echo 'Computers Shipped: ' . $ShipperInst->getShipped();
-echo "\n";
+echo "<br>";
 
 function tester($CompFact, $ShipperInst)
 {
-	echo 'Computer 1: ' . "\n";
+	echo 'Computer 1: ' . "<br>";
 	$CompOne = $CompFact->makeComputer();
 	$ShipperInst->ship();
-	echo 'Make: '  . $CompOne->getMake()  . "\n";
-	echo 'Model: ' . $CompOne->getModel() . "\n";
-	echo 'OS: '    . $CompOne->getOS()    . "\n";
-	echo "\n";
+	echo 'Make: '  . $CompOne->getMake()  . "<br>";
+	echo 'Model: ' . $CompOne->getModel() . "<br>";
+	echo 'OS: '    . $CompOne->getOS()    . "<br>";
+	echo "<br>";
 
-	echo 'Computer 2: ' . "\n";
+	echo 'Computer 2: ' . "<br>";
 	$CompTwo = $CompFact->makeComputer();
 	$ShipperInst->ship();
-	echo 'Make: '  . $CompTwo->getMake()  . "\n";
-	echo 'Model: ' . $CompTwo->getModel() . "\n";
-	echo 'OS: '    . $CompTwo->getOS()    . "\n";
-	echo "\n";
+	echo 'Make: '  . $CompTwo->getMake()  . "<br>";
+	echo 'Model: ' . $CompTwo->getModel() . "<br>";
+	echo 'OS: '    . $CompTwo->getOS()    . "<br>";
+	echo "<br>";
 
-	echo 'Computer 3: (Copy of Computer One with linux instead)' . "\n";
+	echo 'Computer 3: (Copy of Computer One with linux instead)' . "<br>";
 	$CompThree = clone $CompOne;
 	$CompThree->OS = 'Linux';
-	echo 'Make: '  . $CompThree->getMake()  . "\n";
-	echo 'Model: ' . $CompThree->getModel() . "\n";
-	echo 'OS: '    . $CompThree->getOS()    . "\n";	
+	echo 'Make: '  . $CompThree->getMake()  . "<br>";
+	echo 'Model: ' . $CompThree->getModel() . "<br>";
+	echo 'OS: '    . $CompThree->getOS()    . "<br>";	
 
 }
 

@@ -211,18 +211,18 @@ $listOfSongs->addSong( new Song('Stand by You',         'Rachel Platten', 'Even 
 $listOfSongs->addSong( new Song('All You Need Is Love', 'The Beatles',    'Love is all you need.'                                           ));
 $listOfSongs->addSong( new Song('Closing Time',         'Semisonic',      'Every new beginning comes from some other beginning\'s end.'     ));
 
-echo 'First Song: ' . $iterator->getNextSong()->getTitle() . "\n"; //Song 0
+echo 'First Song: ' . $iterator->getNextSong()->getTitle() . "<br>"; //Song 0
 
 $adapter = new SongAdapter( $iterator->getNextSong() ); //Song 1
-echo 'Second Song: ' . $adapter->getTitleComposer() . "\n";
+echo 'Second Song: ' . $adapter->getTitleComposer() . "<br>";
 
 echo 'Is there another song?  ';
 if( $iterator->hasNextSong() )
 {
-	echo 'YES' . "\n";
+	echo 'YES' . "<br>";
 } else
 {
-	echo 'NO' . "\n";
+	echo 'NO' . "<br>";
 }
 
 echo 'Current Song Quote: ';
@@ -230,6 +230,6 @@ echo 'Current Song Quote: ';
 $decorator       = new SongQuoteDecorator(  $iterator->getCurrentSong() );
 $formatDecorator = new SongQuoteFormattedDecorator( $decorator );
 $formatDecorator->formatQuote();
-echo $decorator->showQuote() . "\n";
+echo $decorator->showQuote() . "<br>";
 
 ?>

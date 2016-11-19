@@ -126,12 +126,12 @@ class BeefBurger extends Burger
 $Cashier = new MealDirector();
 $FryCook = new MealBuilder();
 
-echo 'Can I get meal number 1, Medium?' . "\n";
+echo 'Can I get meal number 1, Medium?' . "<br>";
 $meal = $Cashier->build($FryCook, 1, 'Medium');
 getOrderValues($meal);
 
-echo "\n";
-echo 'Can I get meal number 2, Large?' . "\n";
+echo "<br>";
+echo 'Can I get meal number 2, Large?' . "<br>";
 $meal = $Cashier->build($FryCook, 2, 'Large');
 getOrderValues($meal);
 
@@ -141,11 +141,11 @@ function getOrderValues($m)
 	foreach ($m->contents[0]->getIngredients() as $x) {
 		echo ' ' . $x;
 	}
-	echo "\n";
+	echo "<br>";
 	for($i = 1; $i < 3; $i++)
 	{
 		echo $m->contents[$i];
-		echo "\n";
+		echo "<br>";
 	}
 }
 

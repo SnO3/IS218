@@ -81,11 +81,11 @@ class ButtonObserver extends AbstractObserver
 		echo $button->getName() . ' button Boolean equals ';
 
 		if($button->getValue())
-			echo 'True' . "\n";
+			echo 'True' . "<br>";
 		else
-			echo 'False' . "\n";
+			echo 'False' . "<br>";
 
-		echo $button->getName() . ' button type equals ' . $button->getType() . "\n";
+		echo $button->getName() . ' button type equals ' . $button->getType() . "<br>";
 		
 	}
 }
@@ -162,18 +162,18 @@ $stratC = new ButtonContext('C');
 
 $startButton->attach($observer);
 
-echo 'Pressing button twice:' . "\n\n";
+echo 'Pressing button twice:' . "<br><br>";
 
 $startButton->press();
 $startButton->press();
-echo "\n";
+echo "<br>";
 
-echo 'Changing types: ' . "\n\n";
+echo 'Changing types: ' . "<br><br>";
 
 $stratA->changeType($startButton);
-echo "\n";
+echo "<br>";
 $stratB->changeType($startButton);
-echo "\n";
+echo "<br>";
 $stratC->changeType($startButton);
 
 

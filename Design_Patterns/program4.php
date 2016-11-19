@@ -63,16 +63,16 @@ echo 'Notebook2: ';
 verifyNotebook($notebook2);
 
 $adapter = new NoteBookAdapter($notebook1);
-echo $adapter->praiseOwner('Legend') . "\n";
+echo $adapter->praiseOwner('Legend') . "<br>";
 
 function verifyNotebook($n)
 {
 	if( $n->getCopiedFrom() == NULL )
 	{
-		echo 'This is the Original and is owned by ' . $n->getOwner() . "\n";
+		echo 'This is the Original and is owned by ' . $n->getOwner() . "<br>";
 	} else
 	{
-		echo 'Notebook is copied from ' . $n->getCopiedFrom() . ' and is owned by ' . $n->getOwner() . "\n";
+		echo 'Notebook is copied from ' . $n->getCopiedFrom() . ' and is owned by ' . $n->getOwner() . "<br>";
 	}
 }
 

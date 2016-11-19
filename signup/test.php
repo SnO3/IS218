@@ -7,13 +7,10 @@ function signup(){
 
     if(!$db_server) die('Unsable to connect');
 
-    $user = $_POST['email'];
-    $pass = $_POST['pass'];
+    $sql = 'INSERT INTO Users(Email) Values("hello@blah.co");';
 
-    $sql = 'INSERT INTO Users(Email,Password) VALUES("' . $user . '","' . password_hash($pass, PASSWORD_DEFAULT) . '");';	
-
-    include(__ROOT__ . '/signupcomplete.html');    
-
+    include(__ROOT__ . '/signupcomplete.html');    	
+    
     if(mysqli_query($db_server, $sql)){
 		include(__ROOT__ . '/signupT.html');
     }else{

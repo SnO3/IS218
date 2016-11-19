@@ -4,7 +4,7 @@
 class Something
 {
 	private static $inst;
-	public static $MYSUBJECT = 'Computers';
+	const MYSUBJECT = 'Computers';
 
 	public static function getInstance()
 	{
@@ -53,7 +53,7 @@ class NoteBookAdapter
 	}
 }
 
-$notebook1 = new NoteBook(Something::$MYSUBJECT, 'Bob');
+$notebook1 = new NoteBook(Something::MYSUBJECT, 'Bob');
 $notebook2 = clone $notebook1;
 $notebook2->setOwner('Bill');
 

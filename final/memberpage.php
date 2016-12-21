@@ -20,7 +20,7 @@ require('layout/header.php');
 
 
 				<?php
-					echo '<img style="margin: 2em auto 2em auto;" src="images/' . htmlspecialchars($_SESSION['username'], ENT_QUOTES) . '/profile.jpg" alt="ProfilePic">' 
+					echo '<img style="margin: 2em 6em 2em 6em;" src="images/' . htmlspecialchars($_SESSION['username'], ENT_QUOTES) . '/profile.jpg" alt="ProfilePic"><br><h2 style="text-align: center;">' . htmlspecialchars($_SESSION['username'], ENT_QUOTES) . '<h2>';
 				?>
 
 

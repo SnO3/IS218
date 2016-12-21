@@ -19,7 +19,7 @@ if (!empty($_FILES["myFile"])) {
         exit;
     }
 
-    $parts = pathinfo($myFile['name'])
+    $parts = pathinfo($myFile['name']);
 
     if ($parts['extension'] !== 'jpg') {
     	echo "<p>incorrect file extension.</p>";

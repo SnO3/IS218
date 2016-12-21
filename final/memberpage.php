@@ -22,7 +22,7 @@ require('layout/header.php');
 				<?php
 					echo '<img style="margin-left: auto; margin-right: auto;" src="images/' . htmlspecialchars($_SESSION['username'], ENT_QUOTES) . '/profile.jpg" alt="ProfilePic" width="300" height="300"><br>';
 					echo '<form style="text-align: center;" action="uploadimg.php" method="post" enctype="multipart/form-data">';
-					echo '<input type="file" name="myFile"><br><input type="submit" value="Upload">'
+					echo '<input type="file" name="myFile"><br><input type="submit" value="Upload">';
 					echo '</form>';
 					echo '<br><h2 style="text-align: center;">' . htmlspecialchars($_SESSION['username'], ENT_QUOTES) . '<h2>';
 				?>

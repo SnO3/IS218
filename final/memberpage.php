@@ -20,12 +20,14 @@ require('layout/header.php');
 
 
 				<?php
-					echo '<img style="margin-left: auto; margin-right: auto; width: 30em" src="images/' . htmlspecialchars($_SESSION['username'], ENT_QUOTES) . '/profile.jpg" alt="ProfilePic"><br><h2 style="text-align: center;">' . htmlspecialchars($_SESSION['username'], ENT_QUOTES) . '<h2>';
+					echo '<form action="uploadimg.php" method="post" enctype="multipart/form-data">';
+					echo '<input type="image" style="margin-left: auto; margin-right: auto; width: 30em" src="images/' . htmlspecialchars($_SESSION['username'], ENT_QUOTES) . '/profile.jpg" alt="ProfilePic" width="300" height="300"></form>';
+					echo '<br><h2 style="text-align: center;">' . htmlspecialchars($_SESSION['username'], ENT_QUOTES) . '<h2>';
 				?>
 
 
 
-				<p><a style="margin-top: 5em" class="btn btn-primary btn-block btn-lg" href='logout.php' role="button">Logout</a></p>
+				<p><a style="margin-top: 2em" class="btn btn-primary btn-block btn-lg" href='logout.php' role="button">Logout</a></p>
 				<hr>
 
 		</div>

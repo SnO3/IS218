@@ -16,7 +16,7 @@ require('layout/header.php');
 
 	    <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
 			
-				<h1>Welcome</h1>
+				<h1 style="text-align: center;">Welcome</h1>
 
 
 				<?php

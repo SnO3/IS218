@@ -38,7 +38,7 @@ if (!empty($_FILES["myFile"])) {
         exit;
     }
 
-    echo 'Successfully uploaded as ' . $name . '<br>';
+    echo 'Successfully uploaded.<br><p><a href="memberpage.php">Go back</a></p>'
 
 }
 

@@ -4,7 +4,7 @@
 if(!$user->is_logged_in()){ header('Location: login.php'); exit(); }
 
 //define page title
-$title = 'Members Page';
+$title = htmlspecialchars($_SESSION['username'], ENT_QUOTES) . '\'s Profile';
 
 //include header template
 require('layout/header.php'); 

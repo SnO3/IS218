@@ -1,0 +1,8 @@
+#For security
+signup/login.php
+
+# Editors
+*~
+\#*\#
+*.swp
+*.sublime-workspace
